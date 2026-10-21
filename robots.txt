@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://stasisstate.com/sitemap.xml
