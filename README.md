@@ -1,73 +1,54 @@
-# Stasis State LLC — Official Website & Google Play Compliance Portal
+# Stasis State LLC website
 
-This repository contains the official website for **Stasis State LLC**, publisher of **Family Plates** and **Survivor-X**. It is configured to run out-of-the-box on **GitHub Pages** (with support for custom subdomains) and is structured to meet modern **Google Play Store / Android Developer Organization** listing and verification requirements.
+Static organization website for Stasis State LLC: product information, support
+contacts, privacy disclosures, and data-deletion instructions. GitHub Pages serves
+`main` from `/`; no build, dependencies, or application secrets are required.
+`.nojekyll` disables Jekyll processing.
 
----
+| Purpose | Production URL / contact |
+| --- | --- |
+| Organization website | https://stasisstate.com/ |
+| Privacy policy (also linked inside Survivor-X) | https://stasisstate.com/privacy.html |
+| Survivor-X disclosures | https://stasisstate.com/privacy.html#survivor-x |
+| Data controls | https://stasisstate.com/data-deletion.html#survivor-x |
+| Game website | https://survivorx.stasisstate.com/ |
+| Player support | support@stasisstate.com |
+| Privacy requests | privacy@stasisstate.com |
 
-## 📁 Repository Structure
+These are intended production URLs. Verify DNS, TLS, and mailbox delivery before
+Google verification or an app submission. Website copy is not evidence that Google
+has verified the organization or approved an app.
 
-```
-.
-├── index.html            # Main landing page, apps portfolio, and developer disclosures
-├── privacy.html          # Full Privacy Policy (Google Play compliant, COPPA & GDPR ready)
-├── data-deletion.html    # Dedicated Account & Data Deletion URL (Google Play required)
-├── terms.html            # Terms of Service
-├── styles.css            # Responsive, modern dark-mode stylesheet
-├── robots.txt            # Search engine crawler permissions
-├── sitemap.xml           # XML sitemap for search engines
-└── README.md             # Setup guide & Google Play checklist
-```
+## Survivor-X source of truth
 
----
+Checked October 26, 2026 against `../survivor-x` commit `75992ef5`, including
+`app/data-safety.json`, `docs/play/data-safety.md`, `app/build.gradle.kts`, manifests,
+backup rules, `PlayGames.kt`, `MainActivity.kt`, analytics and distribution settings.
 
-## 🌐 GitHub Pages & Subdomain Setup
+- Free: `com.stasisstate.survivorx.free`; Premium: `com.stasisstate.survivorx.paid`.
+- No live advertising SDK, advertising-ID access, Firebase, remote analytics, or
+  in-app billing SDK. Advertising flows are local placeholders today.
+- No publisher game accounts/backend. Saves and run analytics are local.
+  Analytics defaults off in release and on in debug.
+- Play Games saved-game support is present but inactive with default blank
+  `playGamesAppId`. When enabled, disclose player identity, saved progression and
+  lifetime stats, and Google's SDK analytics and diagnostics.
+- Android Auto Backup is enabled independently of Play Games. Analytics and
+  per-install IDs are excluded; mid-run saves are excluded from cloud backup.
+- Premium imports progress locally from the free edition; each app keeps its copy.
 
-GitHub Pages gives you two primary options for subdomains:
+The game's Data Safety declaration anticipates a published build with Play Games
+enabled. Confirm the actual release build before submitting the Console form.
+Keep `privacy.html#survivor-x` and `../survivorx-website/privacy.html` aligned whenever
+SDKs, permissions, data flows, backups, or monetization change. Family Plates was
+not audited against its application source in this task.
 
-### Option A: Custom Subdomain on Your Own Domain (Recommended)
-*Example: `apps.stasisstate.com` or `www.stasisstate.com`*
+## Publishing and verification
 
-1. **Add a `CNAME` file** in the root of this repo containing your desired subdomain (e.g., `apps.stasisstate.com` or `stasisstate.com`).
-2. In your DNS provider (Cloudflare, Namecheap, Route 53, etc.), create a **CNAME** record:
-   - **Type:** `CNAME`
-   - **Name / Host:** `apps` (or `www` or `@` for apex)
-   - **Target / Value:** `<your-github-username>.github.io`
-3. Go to GitHub: **Repository Settings > Pages**:
-   - Source: Deploy from branch (`main` / root `/`).
-   - Custom domain: Enter your domain / subdomain.
-   - Check **"Enforce HTTPS"**.
+See [LAUNCH.md](LAUNCH.md) for exact DNS records, email checks, Pages setup,
+remaining external steps, and official references.
 
-### Option B: Free GitHub-Provided Subdomain
-*Example: `https://stasisstate.github.io`*
-
-1. If you create a GitHub Organization or user account named `stasisstate`, create a repository named:
-   `stasisstate.github.io`
-2. Pushing these files there will instantly serve the site at:
-   `https://stasisstate.github.io/`
-3. If this repository is inside an existing user account (e.g. `dspencer/stasisstatellc-website`), its default URL will be:
-   `https://<username>.github.io/stasisstatellc-website/`
-
----
-
-## 📱 Google Play Store Verification & Listing Checklist
-
-Under Google Play's organization account requirements:
-
-| Google Play Console Field | Value to Enter | Notes |
-| :--- | :--- | :--- |
-| **Legal Entity Name** | `Stasis State LLC` | Must match your state corporate filing & Dun & Bradstreet record |
-| **D-U-N-S Number** | `[Your 9-Digit DUNS]` | Request free from Dun & Bradstreet for "Stasis State LLC" |
-| **Website URL** | `https://stasisstate.com` (or your subdomain) | Must be an active, publicly accessible HTTPS site |
-| **Privacy Policy URL** | `https://<domain>/privacy.html` | Directly points to `privacy.html` (covers Family Plates & Survivor-X) |
-| **Account Deletion Web Link** | `https://<domain>/data-deletion.html` | Required under Google Play Data Safety policy |
-| **Developer Contact Email** | `support@stasisstate.com` | Best practice: Use an email matching your domain |
-| **Physical Address** | Your registered agent or office address | Displayed on your public Google Play developer profile |
-
----
-
-## 🛠 Customizing Your Details
-
-Before publishing to production, customize the placeholders across the HTML files:
-- Replace `support@stasisstate.com` and `privacy@stasisstate.com` with your active forwarding emails or mailboxes.
-- If you have an official registered office address or phone number for the LLC, add it to the developer disclosure card in `index.html`.
-- When app store links become active, link the app cards in `index.html` directly to their Google Play listing badges.
+Preview: `python -m http.server 8080`, then http://localhost:8080/.
+Relative links also support `https://elevate08.github.io/stasisstatellc-website/`
+when no custom domain is configured. Once a custom domain is configured, GitHub
+redirects the default URL to it; it is not a DNS-independent fallback.

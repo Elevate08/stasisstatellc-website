@@ -45,7 +45,7 @@
         <div class="policy-meta">
           <span>Entity: <strong>Stasis State LLC</strong></span> &bull;
           <span>Effective Date: October 20, 2026</span> &bull;
-          <span>Last Updated: October 20, 2026</span>
+          <span>Last Updated: October 26, 2026</span>
         </div>
       </div>
 
@@ -64,25 +64,38 @@
         <h2>2. Information We Collect</h2>
         <p>We believe in data minimization. We only collect information strictly required to deliver, maintain, and protect our services:</p>
 
-        <h3>A. Information You Provide to Us Directly</h3>
+        <h3 id="family-plates">A. Family Plates and Direct Communications</h3>
         <ul>
-          <li><strong>Account Information:</strong> If you register or authenticate (e.g., in Family Plates or Survivor-X cloud sync), we may collect your email address, display name, and authentication credentials.</li>
+          <li><strong>Account Information:</strong> If you register or authenticate (e.g., in Family Plates), we may collect your email address, display name, and authentication credentials.</li>
           <li><strong>User Content (Family Plates):</strong> Recipes, meal schedules, ingredient lists, dietary preferences, and household sharing invitations created within the app.</li>
-          <li><strong>Game Progression & Profile Data (Survivor-X):</strong> Player handles, game state saves, achievements, and leaderboard rankings.</li>
           <li><strong>Communications:</strong> Messages, feedback, or technical support requests sent to our support desk.</li>
         </ul>
 
-        <h3>B. Information Collected Automatically</h3>
+        <h3>B. Family Plates: Information Collected Automatically</h3>
         <ul>
           <li><strong>Device & Network Data:</strong> Operating system version, device model, language settings, and unique anonymous device tokens used for push notifications (if opted in).</li>
           <li><strong>Performance & Diagnostics:</strong> Crash logs, application stack traces, frame rates, and anonymized performance diagnostics to debug issues and prevent crashes.</li>
           <li><strong>Aggregated Usage Metrics:</strong> General feature engagement metrics to improve user interface design.</li>
         </ul>
 
+        <h3 id="survivor-x">C. Survivor-X and Survivor-X Premium</h3>
+        <p>This section applies to <strong>Survivor-X: Astral Forge</strong> (Survivor-X) and <strong>Survivor-X Premium</strong>, published by <strong>Stasis State LLC</strong>. Both editions are playable offline and have no Stasis State accounts or game backend. The Family Plates account, Firebase, crash-reporting, and retention provisions elsewhere on this page do not apply to either edition. If you email us, we receive the information you choose to send.</p>
+        <ul>
+          <li><strong>Local game data:</strong> Saves, progression, lifetime statistics, preferences, and cloud-sync state are kept in Android-protected app storage on your device. Run saves are encrypted at rest. Random installation identifiers support local analytics and save synchronization; they are not advertising IDs.</li>
+          <li><strong>Run analytics:</strong> The “Run analytics” setting records gameplay statistics, waves, drafts, and shop choices to a local file for balance analysis. It defaults to off in release builds and on in debug builds. The game does not upload this file or include it in Android backups. No remote analytics or crash-reporting SDK is integrated.</li>
+          <li><strong>Advertising:</strong> Neither edition currently integrates an advertising SDK, displays real network-served ads, or accesses the advertising ID. The free edition's reward and advertising flows currently use a local placeholder. We will update this policy before introducing a live advertising service or additional data collection.</li>
+          <li><strong>Google Play Games Services:</strong> Cloud-save support is implemented but disabled in the current default configuration. In a build configured for Play Games, Google collects SDK analytics and diagnostics for SDK stability and product improvements while the SDK is active. When you sign in, Google also processes your player identity (gamer ID, gamertag, avatar), saved progression, and lifetime statistics. These support sign-in, saved-game synchronization, and diagnostics. In-progress runs and local run-analytics files are not uploaded. Play Games communicates through Google Play services with encryption in transit; the game itself has no internet permission. You can play offline without signing in. See the <a href="https://policies.google.com/privacy">Google Privacy Policy</a> and <a href="https://developer.android.com/games/pgs/data-collection">Play Games data disclosure</a>. We do not operate a server receiving these saves or share them with advertisers. The game does not use Play Games achievements, leaderboards, friends, or events.</li>
+          <li><strong>Android backup:</strong> If enabled in your device settings, Android may back up your profile, lifetime statistics, and settings through its backup service. Mid-run saves are excluded from cloud backup; on Android 12 and later they may transfer directly to a replacement device. Run analytics and installation identifiers are excluded from backup and device transfer. Backup handling is subject to your device settings and service provider.</li>
+          <li><strong>Progress import:</strong> Premium can copy progress from the free edition directly on the same device through a signature-protected Android provider. This does not use the internet.</li>
+          <li><strong>Purchases:</strong> Premium is a separate paid-app distribution, rather than an in-app upgrade or subscription. No in-app billing SDK is integrated. Any Google Play purchase is handled by Google under its terms; we do not receive payment-card details.</li>
+          <li><strong>Retention and deletion:</strong> Local data remains until removed from your device. Clearing storage or uninstalling removes local game data, but does not delete existing Google backups or Play Games saves. Backups or cloud sync can restore progress. If you used Play Games, delete the game's data through Play Games or your Google Account and manage Android backups separately. Google's retention rules apply to data it holds. See our <a href="data-deletion.html#survivor-x">Survivor-X deletion instructions</a>.</li>
+          <li><strong>Support correspondence:</strong> We use your email address, message, and any attachments you provide to answer your request. We keep correspondence as needed to resolve the request and meet legal obligations. Do not send passwords, verification codes, or payment details. Contact <a href="mailto:privacy@stasisstate.com">privacy@stasisstate.com</a> to request deletion of correspondence we hold.</li>
+        </ul>
+
         <h2>3. How We Use Your Information</h2>
         <p>We process collected data exclusively for lawful purposes:</p>
         <ul>
-          <li>To operate, synchronize, and personalize Family Plates and Survivor-X features.</li>
+          <li>To operate, synchronize, and personalize Family Plates features. Survivor-X processing is described in Section 2C.</li>
           <li>To authenticate user sessions and secure account data across multiple devices.</li>
           <li>To diagnose crashes, patch software bugs, and ensure stability under Google Play guidelines.</li>
           <li>To provide direct customer support and respond to user inquiries.</li>
@@ -92,7 +105,7 @@
 
         <h2>4. Third-Party Services and SDKs</h2>
         <p>
-          Our applications may incorporate trusted third-party software development kits (SDKs) and service providers that process data strictly on our behalf:
+          Family Plates may incorporate the following services. Survivor-X uses only the optional Play Games integration described in Section 2C; it has no Firebase, Crashlytics, advertising, or billing SDK:
         </p>
         <ul>
           <li><strong>Google Play Services:</strong> Used for in-app authentication, store distribution, security integrity, and in-app billing.</li>
@@ -119,15 +132,19 @@
           We retain personal data only for as long as necessary to provide our services and satisfy legitimate business or legal obligations:
         </p>
         <ul>
-          <li>Account information and user content are stored while your account remains active.</li>
-          <li>Crash diagnostics and anonymous telemetry are retained for up to 90 days before being purged or aggregated.</li>
-          <li><strong>Account Deletion:</strong> You have the right to request immediate deletion of your account and associated personal data at any time. In compliance with Google Play's Account Deletion Policy, you may submit a deletion request directly within the app or via our publicly available web portal at <a href="data-deletion.html" style="color: #818cf8;">https://stasisstate.com/data-deletion.html</a>.</li>
+          <li>Family Plates account information and user content are stored while your account remains active.</li>
+          <li>Family Plates crash diagnostics and anonymous telemetry are retained for up to 90 days before being purged or aggregated.</li>
+          <li><strong>Survivor-X:</strong> We hold no Survivor-X data on our servers. Uninstalling the app or clearing its storage removes local data. Existing Android backups and Play Games saves must be managed separately and may restore progress. To delete your cloud save, delete Survivor-X's data from your Google Play Games profile (or delete the profile) in the Play Games app or your Google Account settings.</li>
+          <li><strong>Family Plates Account Deletion:</strong> You have the right to request immediate deletion of your account and associated personal data at any time. In compliance with Google Play's Account Deletion Policy, you may submit a deletion request directly within the app or via our publicly available web portal at <a href="data-deletion.html" style="color: #818cf8;">https://stasisstate.com/data-deletion.html</a>.</li>
         </ul>
 
         <h2>7. Data Security</h2>
         <p>
-          We employ industry-standard administrative, physical, and technical safeguards to protect your personal information. All network communication between the Apps and our backend infrastructure is encrypted in transit using Transport Layer Security (TLS/HTTPS). Stored sensitive data is encrypted at rest.
+          We employ industry-standard administrative, physical, and technical safeguards to protect your personal information. All network communication between the Apps and our backend infrastructure is encrypted in transit using Transport Layer Security (TLS/HTTPS). Survivor-X uses app storage protected by Android and encrypts its run saves; backup handling is described in Section 2C.
         </p>
+
+        <h2>Website Hosting</h2>
+        <p>These static websites are hosted by GitHub Pages. We add no advertising trackers, analytics scripts, or contact forms. GitHub processes visitor connection information, including IP addresses, to operate and secure hosting. See the <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub Privacy Statement</a>. Email links open your email application; sending a message shares its contents with us and our email provider.</p>
 
         <h2>8. Your Rights (GDPR, CCPA, and Global Privacy Laws)</h2>
         <p>Depending on your jurisdiction, you may hold statutory rights regarding your personal information:</p>

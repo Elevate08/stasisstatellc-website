@@ -608,3 +608,11 @@ footer.site-footer {
     padding: 3.5rem 0 2.5rem;
   }
 }
+
+/* Keep support and privacy navigation reachable on small screens. */
+a:focus-visible { outline: 2px solid var(--accent-cyan); outline-offset: 4px; }
+.policy-body a { color: #a5b4fc; overflow-wrap: anywhere; }
+@media (max-width: 1100px) {
+  .nav-wrapper { height: auto; min-height: 4.75rem; flex-wrap: wrap; gap: 1rem; padding-top: 1rem; padding-bottom: 1rem; }
+  .nav-links { display: flex; flex-wrap: wrap; gap: 1rem; }
+}
