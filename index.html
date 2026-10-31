@@ -14,10 +14,11 @@
   <meta property="og:url" content="https://stasisstate.com/" />
 
   <link rel="stylesheet" href="styles.css" />
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%234f46e5'/><path d='M30 35 L70 35 L50 65 Z' fill='%2306b6d4'/></svg>" />
+  <link rel="icon" href="assets/state-machine.svg" type="image/svg+xml" />
 </head>
 <body>
-  <div class="ambient-glow" aria-hidden="true"></div>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
 
   <!-- Site Header -->
   <header class="site-header">
@@ -46,23 +47,26 @@
     </div>
   </header>
 
-  <main>
+  <main id="main-content">
     <!-- Hero Section -->
     <section class="hero container" id="about">
-      <div class="pill-badge">
-        <span class="pill-dot"></span>
-        <span>Independent Software Studio</span>
+      <div class="hero-copy">
+        <div class="sub-title">Independent software. Deliberate by design.</div>
+        <h1>Ideas into apps.<br>One state at a time.</h1>
+        <p class="hero-subtitle">Useful tools for everyday life. Immersive worlds for everything after. We’re Stasis State LLC, an independent mobile software studio.</p>
+        <div class="hero-actions"><a href="#apps" class="btn btn-primary">Discover our applications ↗</a><a href="#developer-profile" class="hero-secondary">Meet the studio</a></div>
       </div>
-      <h1>Building Purposeful Mobile Experiences</h1>
-      <p class="hero-subtitle">
-        Stasis State LLC is an independent software development company dedicated to creating clean, reliable utilities and engaging interactive mobile apps for Android and cross-platform devices.
-      </p>
-      <div class="hero-actions">
-        <a href="#apps" class="btn btn-primary">
-          Explore Our Applications
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-        </a>
-        <a href="privacy.html" class="btn btn-outline">Compliance & Policies</a>
+      <div class="state-diagram" aria-hidden="true">
+        <svg viewBox="0 0 500 430" fill="none">
+          <path d="M120 120h260v180H120" stroke="currentColor" stroke-width="3"/>
+          <rect x="30" y="70" width="180" height="100" rx="8" fill="#f2f0df" stroke="currentColor" stroke-width="3"/>
+          <rect x="290" y="250" width="180" height="100" rx="8" fill="#3556ba" stroke="currentColor" stroke-width="3"/>
+          <text x="60" y="128" fill="currentColor" font-family="monospace" font-size="20">01 / IDEA</text>
+          <text x="315" y="308" fill="white" font-family="monospace" font-size="20">02 / APP</text>
+          <circle cx="380" cy="120" r="16" fill="#3556ba"/>
+          <circle cx="120" cy="300" r="16" fill="currentColor"/>
+        </svg>
+        <span>STASIS STATE / PURPOSE → POSSIBILITY</span>
       </div>
     </section>
 
@@ -70,7 +74,7 @@
     <section id="apps" class="section">
       <div class="container">
         <div class="section-header">
-          <div class="sub-title">Product Portfolio</div>
+          <div class="sub-title">01 / Product Portfolio</div>
           <h2>Our Applications</h2>
           <p>Designed with user safety, performance, and transparency at the core.</p>
         </div>
@@ -80,7 +84,7 @@
           <article class="app-card">
             <div class="app-card-header">
               <a href="https://familyplates.stasisstate.com" target="_blank" rel="noopener noreferrer" style="text-decoration: none; display: flex; align-items: center; gap: 1.25rem;">
-                <img src="assets/family-plates-icon.svg" alt="Family Plates Icon" style="width: 58px; height: 58px; border-radius: var(--radius-md); box-shadow: 0 4px 12px rgba(249, 115, 22, 0.35); flex-shrink: 0;" />
+                <img src="assets/family-plates-icon.svg" alt="Family Plates Icon" style="width: 58px; height: 58px; border-radius: var(--radius-md);  flex-shrink: 0;" />
                 <div class="app-meta">
                   <h3 style="color: var(--text-main);">Family Plates</h3>
                   <span class="app-category">Lifestyle & Family Utility</span>
@@ -118,7 +122,7 @@
           <article class="app-card">
             <div class="app-card-header">
               <a href="https://survivorx.stasisstate.com" target="_blank" rel="noopener noreferrer" style="text-decoration: none; display: flex; align-items: center; gap: 1.25rem;">
-                <img src="assets/survivor-x-icon.png" alt="Survivor-X Icon" style="width: 58px; height: 58px; border-radius: var(--radius-md); box-shadow: 0 4px 12px rgba(6, 182, 212, 0.35); flex-shrink: 0;" />
+                <img src="assets/survivor-x-icon.png" alt="Survivor-X Icon" style="width: 58px; height: 58px; border-radius: var(--radius-md);  flex-shrink: 0;" />
                 <div class="app-meta">
                   <h3 style="color: var(--text-main);">Survivor-X</h3>
                   <span class="app-category">Interactive Arena Survival Roguelite</span>
@@ -159,7 +163,7 @@
     <section class="section" id="compliance">
       <div class="container">
         <div class="section-header">
-          <div class="sub-title">Public Information</div>
+          <div class="sub-title">02 / Public Information</div>
           <h2>Publisher, Privacy &amp; Support</h2>
           <p>
             Find our business identity, privacy disclosures, data controls, and support channels in one place.
@@ -210,7 +214,7 @@
 
         <!-- Business Disclosures & Developer Profile Card -->
         <div class="business-info-card" id="developer-profile">
-          <div class="sub-title">Official Registry & Store Details</div>
+          <div class="sub-title">03 / Developer Details</div>
           <h2>Developer Details</h2>
           <p style="color: var(--text-muted); font-size: 0.95rem; margin-top: 0.5rem;">
             Publisher identity and contact details for our applications:
@@ -254,7 +258,7 @@
     <!-- Contact & Support Section -->
     <section class="section" id="contact">
       <div class="container" style="max-width: 720px; text-align: center;">
-        <div class="sub-title">Reach Out</div>
+        <div class="sub-title">04 / Reach Out</div>
         <h2>Customer Support & Legal Inquiries</h2>
         <p style="color: var(--text-muted); margin-bottom: 2rem;">
           Whether you have a technical question regarding Family Plates or Survivor-X, require customer support, or need assistance exercising your privacy rights, our team is here to help.
@@ -262,7 +266,7 @@
 
         <div style="background-color: var(--bg-card); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 2rem;">
           <p style="font-size: 1.1rem; font-weight: 600; margin-bottom: 0.75rem;">General & Technical Support</p>
-          <p style="margin-bottom: 1.5rem;"><a href="mailto:support@stasisstate.com" style="color: #818cf8; font-size: 1.2rem; text-decoration: none; font-weight: 700;">support@stasisstate.com</a></p>
+          <p style="margin-bottom: 1.5rem;"><a href="mailto:support@stasisstate.com" style="color: var(--accent-primary); font-size: 1.2rem; text-decoration: none; font-weight: 700;">support@stasisstate.com</a></p>
           <p style="color: var(--text-muted); font-size: 0.9rem;">
             Response time: Typically within 24 to 48 business hours.<br />
             Please specify whether your inquiry concerns <strong>Family Plates</strong> or <strong>Survivor-X</strong>.
