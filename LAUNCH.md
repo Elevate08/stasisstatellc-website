@@ -105,10 +105,11 @@ resolvectl query --type=CNAME survivorx.stasisstate.com
   Console flow; publish the exact DNS TXT value Google supplies if using DNS.
 - [ ] Complete contact email/phone verification in Play Console.
 - [ ] Confirm both landing pages display the publisher and working support channels.
-- [ ] Confirm https://stasisstate.com/privacy.html is public over HTTPS: this is
-  the URL already opened by the game's Privacy Policy button.
-- [ ] Confirm https://survivorx.stasisstate.com/privacy.html and both deletion
-  pages are public over HTTPS and disclose the same game behavior.
+- [ ] Confirm https://survivorx.stasisstate.com/privacy.html is public over HTTPS: this is
+  the URL opened by the game's Privacy Policy button, and the URL for the Survivor-X
+  Play Console privacy policy field (both apps).
+- [ ] Confirm https://survivorx.stasisstate.com/terms.html and `/data-deletion.html`
+  are public over HTTPS, and that the pointers on stasisstate.com link to them.
 - [ ] Reconcile the exact release artifact and Play Games configuration with
   `../survivor-x/app/data-safety.json` and `docs/play/data-safety.md`. No live ads
   are integrated today, despite the free flavor's name `ads`.

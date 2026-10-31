@@ -8,9 +8,8 @@ contacts, privacy disclosures, and data-deletion instructions. GitHub Pages serv
 | Purpose | Production URL / contact |
 | --- | --- |
 | Organization website | https://stasisstate.com/ |
-| Privacy policy (also linked inside Survivor-X) | https://stasisstate.com/privacy.html |
-| Survivor-X disclosures | https://stasisstate.com/privacy.html#survivor-x |
-| Data controls | https://stasisstate.com/data-deletion.html#survivor-x |
+| Privacy policy (Family Plates and company) | https://stasisstate.com/privacy.html |
+| Survivor-X terms, privacy policy, data deletion | https://survivorx.stasisstate.com/terms.html, `/privacy.html`, `/data-deletion.html` |
 | Game website | https://survivorx.stasisstate.com/ |
 | Player support | support@stasisstate.com |
 | Privacy requests | privacy@stasisstate.com |
@@ -19,29 +18,14 @@ These are intended production URLs. Verify DNS, TLS, and mailbox delivery before
 Google verification or an app submission. Website copy is not evidence that Google
 has verified the organization or approved an app.
 
-## Survivor-X source of truth
+## Survivor-X
 
-Checked October 26, 2026 against `../survivor-x` commit `75992ef5`, including
-`app/data-safety.json`, `docs/play/data-safety.md`, `app/build.gradle.kts`, manifests,
-backup rules, `PlayGames.kt`, `MainActivity.kt`, analytics and distribution settings.
-
-- Free: `com.stasisstate.survivorx.free`; Premium: `com.stasisstate.survivorx.paid`.
-- No live advertising SDK, advertising-ID access, Firebase, remote analytics, or
-  in-app billing SDK. Advertising flows are local placeholders today.
-- No publisher game accounts/backend. Saves and run analytics are local.
-  Analytics defaults off in release and on in debug.
-- Play Games saved-game support is present but inactive with default blank
-  `playGamesAppId`. When enabled, disclose player identity, saved progression and
-  lifetime stats, and Google's SDK analytics and diagnostics.
-- Android Auto Backup is enabled independently of Play Games. Analytics and
-  per-install IDs are excluded; mid-run saves are excluded from cloud backup.
-- Premium imports progress locally from the free edition; each app keeps its copy.
-
-The game's Data Safety declaration anticipates a published build with Play Games
-enabled. Confirm the actual release build before submitting the Console form.
-Keep `privacy.html#survivor-x` and `../survivorx-website/privacy.html` aligned whenever
-SDKs, permissions, data flows, backups, or monetization change. Family Plates was
-not audited against its application source in this task.
+Survivor-X has its own terms, privacy policy, and data-deletion page, hosted only at
+https://survivorx.stasisstate.com/ (repository `survivorx-website`). This site keeps a
+short pointer in `privacy.html`, `terms.html`, and `data-deletion.html` and lists the
+product on `index.html` and `products.html`. Do not copy Survivor-X disclosures back
+here: update `../survivorx-website` and the game's Data Safety declaration instead.
+Family Plates was not audited against its application source in this task.
 
 ## Publishing and verification
 
