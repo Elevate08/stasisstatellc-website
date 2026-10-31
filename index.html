@@ -13,6 +13,8 @@
   <meta property="og:description" content="Official home of Stasis State LLC, publisher of Family Plates and Survivor-X." />
   <meta property="og:url" content="https://stasisstate.com/" />
 
+  <meta name="color-scheme" content="light dark" />
+  <script src="theme.js"></script>
   <link rel="stylesheet" href="styles.css" />
   <link rel="icon" href="assets/state-machine.svg" type="image/svg+xml" />
 </head>
@@ -44,6 +46,14 @@
           <li><a href="#contact" class="btn btn-outline btn-sm">Support</a></li>
         </ul>
       </nav>
+      <label class="theme-control" hidden>
+        Theme
+        <select id="theme-select" aria-label="Color theme">
+          <option value="system">System</option>
+          <option value="light">Light</option>
+          <option value="dark">Dark</option>
+        </select>
+      </label>
     </div>
   </header>
 
@@ -59,11 +69,11 @@
       <div class="state-diagram" aria-hidden="true">
         <svg viewBox="0 0 500 430" fill="none">
           <path d="M120 120h260v180H120" stroke="currentColor" stroke-width="3"/>
-          <rect x="30" y="70" width="180" height="100" rx="8" fill="#f2f0df" stroke="currentColor" stroke-width="3"/>
-          <rect x="290" y="250" width="180" height="100" rx="8" fill="#3556ba" stroke="currentColor" stroke-width="3"/>
+          <rect x="30" y="70" width="180" height="100" rx="8" fill="var(--bg-primary)" stroke="currentColor" stroke-width="3"/>
+          <rect x="290" y="250" width="180" height="100" rx="8" fill="var(--button-bg)" stroke="currentColor" stroke-width="3"/>
           <text x="60" y="128" fill="currentColor" font-family="monospace" font-size="20">01 / IDEA</text>
-          <text x="315" y="308" fill="white" font-family="monospace" font-size="20">02 / APP</text>
-          <circle cx="380" cy="120" r="16" fill="#3556ba"/>
+          <text x="315" y="308" fill="var(--button-text)" font-family="monospace" font-size="20">02 / APP</text>
+          <circle cx="380" cy="120" r="16" fill="var(--button-bg)"/>
           <circle cx="120" cy="300" r="16" fill="currentColor"/>
         </svg>
         <span>STASIS STATE / PURPOSE → POSSIBILITY</span>

@@ -6,6 +6,8 @@
   <title>Privacy Policy — Stasis State LLC</title>
   <meta name="description" content="Official Privacy Policy for Stasis State LLC and its mobile applications, including Family Plates. Survivor-X has its own privacy policy." />
   <meta name="robots" content="index, follow" />
+  <meta name="color-scheme" content="light dark" />
+  <script src="theme.js"></script>
   <link rel="stylesheet" href="styles.css" />
   <link rel="icon" href="assets/state-machine.svg" type="image/svg+xml" />
 </head>
@@ -36,6 +38,14 @@
           <li><a href="index.html#contact" class="btn btn-outline btn-sm">Support</a></li>
         </ul>
       </nav>
+      <label class="theme-control" hidden>
+        Theme
+        <select id="theme-select" aria-label="Color theme">
+          <option value="system">System</option>
+          <option value="light">Light</option>
+          <option value="dark">Dark</option>
+        </select>
+      </label>
     </div>
   </header>
 
