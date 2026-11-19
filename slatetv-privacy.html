@@ -74,7 +74,7 @@
 
         <h2>2. Installed Applications &amp; Package Visibility</h2>
         <p>
-          Because Slate TV functions as an Android TV home screen launcher, it queries Android's <code>PackageManager</code> to list, pin, reorder, hide, and launch your installed TV apps and (if you opt in) sideloaded apps, as well as to discover compatible Slate TV companion plugins.
+          Because Slate TV functions as an Android TV home screen launcher, it queries Android's <code>PackageManager</code> to list, pin, reorder, hide, and launch your installed TV apps and (if you opt in) sideloaded apps.
         </p>
         <p>
           Your installed-app inventory is processed strictly on your device and is never transmitted off your device, shared with third parties, or used for advertising or profiling. Slate TV does not use an Accessibility Service.
@@ -82,12 +82,12 @@
 
         <h2>3. Data Stored on Your Device</h2>
         <p>
-          Your launcher preferences, pinned and hidden app dock layout, selected background source, and bounded local photo cache are stored solely on your device. They are excluded from Android cloud backup and device-to-device transfer. Clearing app data or uninstalling Slate TV removes all local data.
+          Your launcher preferences, pinned and hidden app dock layout, selected background source, encrypted connector credentials (Android Keystore), pinned TLS certificates, and bounded local photo cache are stored solely on your device. They are excluded from Android cloud backup and device-to-device transfer. Clearing app data or uninstalling Slate TV removes all local data.
         </p>
 
-        <h2>4. Optional Plugins &amp; User-Configured Sources</h2>
+        <h2>4. Optional Connectors, TV Listings &amp; JSON Extensions</h2>
         <p>
-          Slate TV supports local photo folders and optional plugins or external sources that you choose to install and configure (such as personal photo servers or live TV program guides). Any credentials, local network requests, or media traffic for those sources stay between your device and the sources you configure. Stasis State LLC does not receive, inspect, or store this traffic.
+          Slate TV supports local photo folders, on-device Android TV Live Channels listings (when you grant <code>READ_TV_LISTINGS</code>), and optional user-configured servers or zero-code HTTP/JSON feeds (such as personal photo servers or live TV program guides). Any credentials, local network discovery requests, or media traffic for those sources stay strictly between your device and the sources you choose. Stasis State LLC does not receive, inspect, or store this traffic.
         </p>
 
         <h2>5. Optional Tips</h2>
