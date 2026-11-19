@@ -9,6 +9,7 @@ contacts, privacy disclosures, and data-deletion instructions. GitHub Pages serv
 | --- | --- |
 | Organization website | https://stasisstate.com/ |
 | Privacy policy (Family Plates and company) | https://stasisstate.com/privacy.html |
+| NeoButtons privacy policy | https://stasisstate.com/neobuttons-privacy.html |
 | Survivor-X terms, privacy policy, data deletion | https://survivorx.stasisstate.com/terms.html, `/privacy.html`, `/data-deletion.html` |
 | Game website | https://survivorx.stasisstate.com/ |
 | Player support | support@stasisstate.com |
