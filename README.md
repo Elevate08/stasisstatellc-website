@@ -8,8 +8,11 @@ contacts, privacy disclosures, and data-deletion instructions. GitHub Pages serv
 | Purpose | Production URL / contact |
 | --- | --- |
 | Organization website | https://stasisstate.com/ |
+| Products catalog | https://stasisstate.com/products.html |
+| NeoButtons app page & privacy policy | https://stasisstate.com/neobuttons.html, `/neobuttons-privacy.html` |
+| Slate TV app page & privacy policy | https://stasisstate.com/slatetv.html, `/slatetv-privacy.html` |
 | Privacy policy (Family Plates and company) | https://stasisstate.com/privacy.html |
-| NeoButtons privacy policy | https://stasisstate.com/neobuttons-privacy.html |
+| Data deletion & local-only app controls | https://stasisstate.com/data-deletion.html |
 | Survivor-X terms, privacy policy, data deletion | https://survivorx.stasisstate.com/terms.html, `/privacy.html`, `/data-deletion.html` |
 | Game website | https://survivorx.stasisstate.com/ |
 | Player support | support@stasisstate.com |

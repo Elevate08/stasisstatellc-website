@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Slate TV — Minimal, Gallery-First Android TV Launcher — Stasis State LLC</title>
+  <meta name="description" content="Slate TV by Stasis State LLC is a minimal, gallery-first Android TV launcher with full-screen photo backdrops, a reorderable app dock, built-in photo and live TV connectors, and zero-code JSON extensions." />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Slate TV — Minimal Android TV Launcher — Stasis State LLC" />
+  <meta property="og:description" content="A minimal, gallery-first Android TV launcher with rotating photo backdrops, a reorderable app dock, live TV guides, and zero-code JSON extensions." />
+  <meta property="og:url" content="https://stasisstate.com/slatetv.html" />
+  <meta name="color-scheme" content="light dark" />
+  <script src="theme.js"></script>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" href="assets/state-machine.svg" type="image/svg+xml" />
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container nav-wrapper">
+      <a href="index.html" class="brand-link" aria-label="Stasis State LLC Home">
+        <div class="brand-logo-icon" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+            <polyline points="2 17 12 22 22 17"></polyline>
+            <polyline points="2 12 12 17 22 12"></polyline>
+          </svg>
+        </div>
+        <span>Stasis State LLC</span>
+      </a>
+
+      <nav aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html" class="active">Products</a></li>
+          <li><a href="slatetv-privacy.html">Privacy</a></li>
+          <li><a href="data-deletion.html#slatetv">Data Controls</a></li>
+          <li><a href="index.html#contact" class="btn btn-outline btn-sm">Support</a></li>
+        </ul>
+      </nav>
+      <label class="theme-control" hidden>
+        Theme
+        <select id="theme-select" aria-label="Color theme">
+          <option value="system">System</option>
+          <option value="light">Light</option>
+          <option value="dark">Dark</option>
+        </select>
+      </label>
+    </div>
+  </header>
+
+  <main id="main-content" class="container" style="padding-bottom: 5rem;">
+    <section class="product-hero">
+      <img src="assets/slatetv-icon.png" alt="Slate TV Icon" class="product-hero-icon" />
+      <div class="product-hero-meta">
+        <div class="sub-title">Android TV Home Launcher · com.stasisstate.slatetv</div>
+        <h1>Slate TV</h1>
+        <p>
+          A minimal, gallery-first launcher built exclusively for Android TV. Full-bleed photo backdrops set a calm scene behind a quiet clock, photo captions, and a reorderable dock for your favorite apps—with zero ads, zero paywalls, and zero companion APKs required.
+        </p>
+        <div class="product-badges">
+          <span class="product-badge">Android TV Only</span>
+          <span class="product-badge">100% Free · Zero Ads</span>
+          <span class="product-badge">No Accessibility Service</span>
+          <span class="product-badge">Zero-Code JSON Extensions</span>
+        </div>
+        <div class="app-actions">
+          <a href="slatetv-privacy.html" class="btn btn-primary btn-sm">Privacy Policy</a>
+          <a href="data-deletion.html#slatetv" class="btn btn-outline btn-sm">Data Controls</a>
+          <a href="mailto:support@stasisstate.com?subject=Slate%20TV%20Support" class="btn btn-outline btn-sm">Contact Support</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-header">
+        <div class="sub-title">01 / Design &amp; Features</div>
+        <h2>Calm, Fast, Built for the Living Room</h2>
+        <p>Everything runs inside one lightweight Android TV app engineered for instant wake recovery and clean D-pad navigation.</p>
+      </div>
+
+      <div class="feature-grid">
+        <article class="feature-card">
+          <h3>Gallery-First Home Screen</h3>
+          <ul>
+            <li>Full-screen rotating photo backdrops with smart portrait blur pillarbox and optional date/location captions</li>
+            <li>Distraction-free Idle Gallery Mode fades the dock and clock smoothly after inactivity</li>
+            <li>Built-in Ambient Slate gradients and Local Photos folder slideshow work completely offline</li>
+          </ul>
+        </article>
+
+        <article class="feature-card">
+          <h3>Effortless App Dock &amp; All Apps</h3>
+          <ul>
+            <li>Pin, unpin, hide, and continuously reorder apps directly on the Home dock with your TV remote</li>
+            <li>Instant All Apps overlay to browse and launch every installed Android TV app (plus optional sideloaded apps)</li>
+            <li>Standard Android TV Home launcher with in-app Default Home setup—no Accessibility Service needed</li>
+          </ul>
+        </article>
+
+        <article class="feature-card">
+          <h3>Built-In Connectors &amp; Live TV Guides</h3>
+          <ul>
+            <li>Connect self-hosted photo libraries over LAN discovery or QR phone pairing with Android Keystore credential encryption and TOFU SHA-256 TLS pinning</li>
+            <li>On-device Android TV Live Channels program guide and optional personal media server live TV shelf</li>
+            <li>Shelves stay completely hidden whenever unconfigured or unavailable</li>
+          </ul>
+        </article>
+
+        <article class="feature-card">
+          <h3>Zero-Code JSON Extensions &amp; Wake Hardening</h3>
+          <ul>
+            <li>Add community photo feeds or home shelves via QR code or URL using the Open HTTP/JSON Extension Protocol—no extra APKs or code running on your TV</li>
+            <li>Handles HDMI-CEC wakes and SDR/HDR display mode changes in place without black flashes</li>
+            <li>Optional Tip Jar supports development and unlocks nothing; every feature is free</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-header">
+        <div class="sub-title">02 / Privacy &amp; Permissions</div>
+        <h2>Private by Architecture</h2>
+        <p>Slate TV has no user accounts, no analytics SDKs, and no servers operated by Stasis State LLC.</p>
+      </div>
+
+      <div class="alert-box">
+        <p>
+          <strong>Installed Apps &amp; Local Data:</strong> Because Slate TV is an Android TV home screen launcher, it reads installed app information strictly on-device so you can organize and launch your apps. Any optional photo library, live TV guide, or JSON feed traffic stays solely between your TV and the sources you configure.
+        </p>
+      </div>
+
+      <div class="business-info-card">
+        <div class="business-grid" style="margin-top: 0;">
+          <div class="business-field">
+            <span class="business-label">Package ID</span>
+            <span class="business-value"><code>com.stasisstate.slatetv</code></span>
+          </div>
+          <div class="business-field">
+            <span class="business-label">Pricing Model</span>
+            <span class="business-value">Free — optional in-app Tip Jar unlocks nothing</span>
+          </div>
+          <div class="business-field">
+            <span class="business-label">Privacy Policy</span>
+            <span class="business-value"><a href="slatetv-privacy.html">stasisstate.com/slatetv-privacy.html</a></span>
+          </div>
+          <div class="business-field">
+            <span class="business-label">Support Email</span>
+            <span class="business-value"><a href="mailto:support@stasisstate.com">support@stasisstate.com</a></span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <div>&copy; 2026 Stasis State LLC. All rights reserved.</div>
+        <div>
+          <a href="index.html" style="color: var(--text-muted); text-decoration: none; margin-right: 1.5rem;">Home</a>
+          <a href="products.html" style="color: var(--text-muted); text-decoration: none; margin-right: 1.5rem;">Products</a>
+          <a href="slatetv-privacy.html" style="color: var(--text-muted); text-decoration: none; margin-right: 1.5rem;">Privacy Policy</a>
+          <a href="terms.html" style="color: var(--text-muted); text-decoration: none;">Terms</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
